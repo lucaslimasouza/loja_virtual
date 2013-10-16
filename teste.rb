@@ -1,7 +1,7 @@
 require File.expand_path("lib/loja_virtual")
 
-teste_e_design = Livro.new "Lucas Lima","1234",67, 45.9, :teste
-design_responsivo = Livro.new "Tarcio Zentel", "1234", 45, 24.8, :design
+teste_e_design = Livro.new "TDD", "Lucas Lima","1234",67, 45.9, :teste
+design_responsivo = Livro.new "Design", "Tarcio Zentel", "1234", 45, 24.8, :design
 
 biblioteca = Biblioteca.new
 relatorio = Relatorio.new biblioteca
@@ -15,7 +15,9 @@ biblioteca.livro_por_categoria :teste do |livro|
 	p livro.autor
 end
 
+puts "Relatorio"
 puts "Valor total dos Livros cadastrados. Total= #{relatorio.total}"
-
+puts "Titulos:"
+relatorio.titulos.each { |titulo| p titulo}
 
 
