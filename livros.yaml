@@ -6,3 +6,10 @@ numero_de_paginas: 67
 preco: 45.9
 categoria: :teste
 
+--- !ruby/object:Livro
+titulo: Design
+autor: Tarcio Zentel
+isbn: '1234'
+numero_de_paginas: 45
+preco: 24.8
+categoria: :design
