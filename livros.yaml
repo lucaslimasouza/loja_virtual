@@ -1,0 +1,8 @@
+--- !ruby/object:Livro
+titulo: TDD
+autor: Lucas Lima
+isbn: '1234'
+numero_de_paginas: 67
+preco: 45.9
+categoria: :teste
+
