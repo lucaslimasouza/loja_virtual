@@ -3,13 +3,31 @@ titulo: TDD
 autor: Lucas Lima
 isbn: '1234'
 numero_de_paginas: 67
-preco: 45.9
+valor: 45.9
 categoria: :teste
+desconto: 0.15
 
 --- !ruby/object:Livro
 titulo: Design
 autor: Tarcio Zentel
 isbn: '1234'
 numero_de_paginas: 45
-preco: 24.8
+valor: 24.8
 categoria: :design
+desconto: 0.15
+
+--- !ruby/object:Livro
+titulo: abc
+autor: Mauricio
+isbn: '556214'
+numero_de_paginas: 89
+valor: 78.0
+categoria: :abc
+desconto: 0.15
+
+--- !ruby/object:DVD
+titulo: Windowns 7 for Dummies
+valor: 10.1
+categoria: :sistemas_operacionais
+desconto: 0.1
+
