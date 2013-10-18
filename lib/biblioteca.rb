@@ -1,30 +1,37 @@
 # coding: utf-8
 
-class Biblioteca
+module VendaFacil
 
-	def initialize()
-		@banco_de_arquivo = BancoDeArquivo.new
-	end
+	class Biblioteca
 
-	def adiciona(livro)
-		salva livro do 
-			livros << livro 
+		def initialize()
+			@banco_de_arquivo = BancoDeArquivo.new
 		end
-	end
 
-	def livro_por_categoria(categoria)
-		livros.select {|livro| livro.categoria == categoria}
-	end
+		def adiciona(midia)
+			salva midia do 
+				midias << midia 
+			end if midia.kind_of? Midia
+		end
 
-	def livros
-		@livros ||= @banco_de_arquivo.carrega
-	end
+		def midia_por_categoria(categoria)
+			midias.select do |midia| 
+				midia.categoria == categoria if midia.respond_to? :categoria
+			end
+		end
 
-	private
+		def midias
+			@midias ||= @banco_de_arquivo.carrega
+		end
 
-	def salva(livro)
-		@banco_de_arquivo.salva livro
-		yield
+		private
+
+		def salva(midia)
+			@banco_de_arquivo.salva midia
+			yield
+		end
+
 	end
 
 end
+
