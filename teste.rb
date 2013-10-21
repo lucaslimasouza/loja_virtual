@@ -3,6 +3,10 @@ require File.expand_path("lib/loja_virtual")
 
 biblioteca = VendaFacil::Biblioteca.new
 relatorio = Relatorio.new biblioteca
+revista = Revista.find 1
+
+puts revista.titulo
+
 
 puts "Valor com Desconto categoria"
 biblioteca.midia_por_categoria(:sistemas_operacionais).each do |midia| 
