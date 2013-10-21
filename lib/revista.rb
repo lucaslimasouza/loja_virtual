@@ -2,19 +2,13 @@
 
 require "fileutils"
 
-class Revista
+class Revista < Midia
 
-	attr_reader :titulo, :id, :destroyed, :new_record
-	attr_accessor :valor
-
+	include FormatadorMoeda
 	include ActiveFile
 
-	def initialize(titulo,valor)
-		@titulo = titulo
-		@valor = valor
-		@id = self.class.next_id
-		@destroyed = false
-		@new_record = true
-	end
+	field :titulo
+	field :valor
+	formata_moeda :valor_com_desconto, :valor
 
 end

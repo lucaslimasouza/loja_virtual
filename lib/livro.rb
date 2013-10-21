@@ -5,6 +5,7 @@ class Livro < Midia
 	attr_reader :autor
 
 	include FormatadorMoeda
+	include ActiveFile
 
 	formata_moeda :valor_com_desconto, :valor
 

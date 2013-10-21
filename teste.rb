@@ -3,10 +3,7 @@ require File.expand_path("lib/loja_virtual")
 
 biblioteca = VendaFacil::Biblioteca.new
 relatorio = Relatorio.new biblioteca
-info = Revista.new "INFO", 11.2
-info.save
-revista = Revista.find(1)
-p revista.titulo
+p Revista.find_by_titulo /Veja/
 
 
 puts "Valor com Desconto categoria"
